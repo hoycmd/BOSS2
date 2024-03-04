@@ -32,6 +32,9 @@ Build.GetContext().BuildRangeEnable.Value = true;
 player.function.immortal.Value = true;
 player.function.Skin.Type.Value = 1;
 
+// создаем команды
+
+
 
 
 
