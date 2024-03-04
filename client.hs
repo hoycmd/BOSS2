@@ -32,6 +32,10 @@ Build.GetContext().BuildRangeEnable.Value = true;
 player.function.immortal.Value = true;
 player.function.Skin.Type.Value = 1;
 
+//
+var des "color=Yellow>ПОКУПКИ</a>ОТ SSODM!!!";
+
+
 // создаем команды
 red = GameMode.Parameters.GetBool("RedTeam");
 blue = GameMode.Parameters.GetBool("BlueTeam");
@@ -43,10 +47,13 @@ if (red || !red && !blue) {
   }
 
   if (blue || !red && !blue) {
-   Teams.Add("Blue",
-  "color=Orange>ИГРОКИ</a>",{g:128});
-   Teams.Get("Blue").Spawns.SpawnPointsGroups.Add(1);
-   if(GameMode.Parameters.GetBool("BlueHasNothing"))
+ Teams.Add("Blue", "<color=orange>ИГРОКИ</a>", { g: 128 });
+ Teams.Get("Blue").Spawns.SpawnPointsGroups.Add(1);
+ if(GameMode.Parameters.GetBool("BlueHasNothing")){
+  var inventory = Inventory.GetContext();
+  Teams.Get("Blue").Inventory.Main.Value = false;
+  Teams.Get("Blue").Inventory.Secondary.Value = false;
+  Teams.Get("Blue").Inventory.Melee.Value = false;
    
 
 
