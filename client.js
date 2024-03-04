@@ -34,6 +34,10 @@ player.function.Skin.Type.Value = 1;
 
 //
 var des "color=Yellow>ПОКУПКИ</a>ОТ SSODM!!!";
+Teams.Get("Red").Properties.Get("Des").Value = des;  
+Ui.GetContext().TeamProp2.Value = { Team: "Blue", Prop: "Des" };   
+Teams.Get("Blue").Properties.Get("Des").Value = des;  
+Ui.GetContext().TeamProp1.Value = { Team: "Red", Prop: "Des" };
 
 
 // создаем команды
@@ -54,6 +58,11 @@ if (red || !red && !blue) {
   Teams.Get("Blue").Inventory.Main.Value = false;
   Teams.Get("Blue").Inventory.Secondary.Value = false;
   Teams.Get("Blue").Inventory.Melee.Value = false;
+  Teams.Get("Blue").Inventory.ExpIosive.Value = false;
+  Teams.Get("Blue").Inventory.Build.Value = false;
+
+  // задаем что выводить в лидербордах
+  
    
 
 
