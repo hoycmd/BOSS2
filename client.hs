@@ -33,10 +33,21 @@ player.function.immortal.Value = true;
 player.function.Skin.Type.Value = 1;
 
 // создаем команды
+red = GameMode.Parameters.GetBool("RedTeam");
+blue = GameMode.Parameters.GetBool("BlueTeam");
+if (red || !red && !blue) {
+ Teams.Add("Red",
+ "color=Red>АДМИНЫ</a>",{r:80});
+  Teams.Get("Red").Spawns.SpawnPointsGroups.Add
+  (1);
+  }
 
-
-
-
+  if (blue || !red && !blue) {
+   Teams.Add("Blue",
+  "color=Orange>ИГРОКИ</a>",{g:128});
+   Teams.Get("Blue").Spawns.SpawnPointsGroups.Add(1);
+   if(GameMode.Parameters.GetBool("BlueHasNothing"))
+   
 
 
 
